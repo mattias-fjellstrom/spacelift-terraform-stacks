@@ -1,5 +1,5 @@
 output "subnet_ids" {
-  value = [for az in local.az_map : aws_subnet.public[az].id]
+  value = [for k, v in aws_subnet.public : v.id]
 }
 
 output "vpc_id" {
