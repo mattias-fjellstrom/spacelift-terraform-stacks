@@ -11,13 +11,13 @@ deployment "dev" {
   inputs = {
     configurations = {
       "eu-west-1" = {
-        cidr_block = cidrsubnet(local.base_cidr, 4, 0)
+        cidr_block = "10.0.0.0/20"
       }
       "eu-west-2" = {
-        cidr_block = cidrsubnet(local.base_cidr, 4, 1)
+        cidr_block = "10.0.16.0/20"
       }
       "eu-west-3" = {
-        cidr_block = cidrsubnet(local.base_cidr, 4, 2)
+        cidr_block = "10.0.32.0/20"
       }
     }
     environment    = "dev"
