@@ -12,3 +12,17 @@ component "network" {
     aws = provider.aws.all[each.key]
   }
 }
+
+component "servers" {
+  for_each = var.configurations
+
+  source = "./modules/instance"
+
+  inputs = {
+    subnet_ids = component.network.subnet_ids
+  }
+
+  providers = {
+    aws = provider.aws.all[each.key]
+  }
+}
