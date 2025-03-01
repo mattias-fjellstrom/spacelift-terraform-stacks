@@ -19,7 +19,7 @@ component "servers" {
   source = "./modules/instance"
 
   inputs = {
-    subnet_ids = component.network.subnet_ids
+    subnet_ids = component.network[each.key].subnet_ids
   }
 
   providers = {
