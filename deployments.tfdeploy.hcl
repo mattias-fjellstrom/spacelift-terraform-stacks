@@ -19,7 +19,6 @@ deployment "dev" {
         cidr_block = "10.0.32.0/20"
       }
     }
-    environment    = "dev"
     identity_token = identity_token.aws.jwt
     role_arn       = local.role_arn
   }
@@ -38,7 +37,6 @@ deployment "stage" {
         cidr_block = "10.100.32.0/20"
       }
     }
-    environment    = "stage"
     identity_token = identity_token.aws.jwt
     role_arn       = local.role_arn
   }
@@ -57,7 +55,6 @@ deployment "prod" {
         cidr_block = "10.200.32.0/20"
       }
     }
-    environment    = "prod"
     identity_token = identity_token.aws.jwt
     role_arn       = local.role_arn
   }

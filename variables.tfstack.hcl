@@ -1,13 +1,8 @@
 variable "configurations" {
-  description = "AWS regions to deploy infrastructure in"
+  description = "Map of AWS region name to its configuration"
   type = map(object({
     cidr_block = string
   }))
-}
-
-variable "environment" {
-  description = "Application environment name"
-  type        = string
 }
 
 variable "identity_token" {
