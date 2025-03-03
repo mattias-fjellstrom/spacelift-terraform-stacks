@@ -35,6 +35,8 @@ data "aws_iam_policy_document" "stacks_role_policy" {
   }
 }
 
+# NOT FOR USE IN PRODUCTION!
+# you might want to restrict this to a different narrowed-down policy
 resource "aws_iam_role_policy_attachment" "iam" {
   role       = aws_iam_role.stacks_role.name
   policy_arn = "arn:aws:iam::aws:policy/AdministratorAccess"

@@ -1,5 +1,5 @@
 locals {
-  role_arn  = "arn:aws:iam::629138043200:role/spacelift-demo"
+  role_arn  = "arn:aws:iam::<replace with your account id>:role/spacelift-demo"
 }
 
 identity_token "aws" {

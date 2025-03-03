@@ -13,10 +13,10 @@ component "network" {
   }
 }
 
-component "servers" {
+component "compute" {
   for_each = var.configurations
 
-  source = "./modules/instance"
+  source = "./modules/compute"
 
   inputs = {
     subnet_ids = component.network[each.key].subnet_ids
